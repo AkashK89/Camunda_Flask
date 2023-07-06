@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="decideLifestyle" name="Lifestyle" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="salaryDecision" name="Salary Decision">
+    <decisionTable id="DecisionTable_10w32q6" hitPolicy="FIRST">
+      <input id="Input_1" label="Total Experience" camunda:inputVariable="totalExperience">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_12atv5z" label="Salary" camunda:inputVariable="salary">
+        <inputExpression id="LiteralExpression_0mo2pej" typeRef="long">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Lifestyle" name="lifestyle" typeRef="string">
+        <outputValues id="UnaryTests_04knrgb">
+          <text>"great","normal","poor"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1ytf8xp">
+        <inputEntry id="UnaryTests_0b41dh6">
+          <text>[0..2]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mrqupv">
+          <text>[200000..400000]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ca0sfg">
+          <text>"normal"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cuoq4a">
+        <inputEntry id="UnaryTests_0g3l4m3">
+          <text>[2..5]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0luoeqs">
+          <text>[400000..1000000]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wrkmtz">
+          <text>"normal"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bo5flu">
+        <inputEntry id="UnaryTests_0afkfoe">
+          <text>[5..10]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kgwjk7">
+          <text>[1000000..2500000]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dzmt5t">
+          <text>"normal"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mey7oi">
+        <inputEntry id="UnaryTests_19p2jla">
+          <text>&gt; 10</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iwlv8r">
+          <text>[2500000..10000000]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m0u5kb">
+          <text>"normal"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c5r5vr">
+        <inputEntry id="UnaryTests_0q32anm">
+          <text>[5..10]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10fd89l">
+          <text>&gt; 2500000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_065jot1">
+          <text>"great"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07lzced">
+        <inputEntry id="UnaryTests_13d1jqf">
+          <text>&gt; 10</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lweizy">
+          <text>&lt; 2500000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_032xm9t">
+          <text>"poor"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qdele4">
+        <inputEntry id="UnaryTests_02byj18">
+          <text>[0..2]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g2v20t">
+          <text>&gt;400000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1whlyce">
+          <text>"great"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jotlpp">
+        <inputEntry id="UnaryTests_1jmyj3t">
+          <text>[2..5]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_057m744">
+          <text>&gt; 1000000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1izpwgu">
+          <text>"great"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bil76x">
+        <inputEntry id="UnaryTests_1fqswzw">
+          <text>[5..10]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m1srm0">
+          <text>&lt;1000000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13g0spf">
+          <text>"poor"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zohqfs">
+        <inputEntry id="UnaryTests_1y2ij3z">
+          <text>[0..2]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fcftny">
+          <text>&lt;200000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vxibci">
+          <text>"poor"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15b4lkl">
+        <inputEntry id="UnaryTests_0fpqs8h">
+          <text>[2..5]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q6ve5c">
+          <text>&lt;400000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qdh9hn">
+          <text>"poor"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mw3r03">
+        <inputEntry id="UnaryTests_1ff416t">
+          <text>&gt; 10</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fy7lww">
+          <text>&gt;10000000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oai15h">
+          <text>"great"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="salaryDecision">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
