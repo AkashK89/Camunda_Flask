@@ -7,7 +7,7 @@ Implement your BPMN Service Task in Python3.
 
 ## Installing
 ```
-pip install -r requirements.txt`
+pip install -r requirements.txt
 ```
 ## Usage
 
