@@ -1,4 +1,4 @@
-# using ubuntu LTS version
+# using Ubuntu LTS version
 FROM ubuntu:20.04 AS builder-image
 
 # avoid stuck build due to user prompt
@@ -18,8 +18,8 @@ EXPOSE 5000
 ENV PYTHONUNBUFFERED=1
 ENV FLASK_DEBUG=1
 
-#You can set the camunda host and port here
-ENV CAMUNDA_HOST=
-ENV CAMUNDA_PORT=
+#You can set the Camunda host and port here
+ENV CAMUNDA_HOST=192.168.0.208
+ENV CAMUNDA_PORT=8100
 
 CMD ["python3", "views.py"]
