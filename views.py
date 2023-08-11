@@ -13,6 +13,10 @@ camunda_port = os.environ.get('CAMUNDA_PORT', '8080')
 
 BASE_URL = 'http://'+camunda_host+':'+camunda_port+'/engine-rest'
 
+@app.route('/')
+def home():
+    return "<h1>Welcome to Demo project page</h1>"
+
 @app.route('/test_lifestyle_flow', methods=['GET', 'POST'])
 def test_flow():
     logger = configure_logging()
